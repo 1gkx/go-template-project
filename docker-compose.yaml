@@ -1,0 +1,8 @@
+version: "3.9"
+
+services:
+  service_name:
+    image: golang:1.22-alpine3.19
+    container_name: demo-project
+    host: demo-project
+    restart: unless-stopped

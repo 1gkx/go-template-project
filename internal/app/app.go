@@ -8,6 +8,7 @@ import (
 	"syscall"
 	"time"
 
+	"github.com/1gkx/go-template-project/internal/config"
 	"github.com/1gkx/go-template-project/internal/transport/grpc"
 	"github.com/1gkx/go-template-project/internal/transport/http"
 	pbHealth "github.com/1gkx/go-template-project/pkg/api"
@@ -56,17 +57,23 @@ func (a *App) Run() error {
 
 	var (
 		err     error
+		conf    *config.Config
 		httpSrv *http.Server
 		grpcSrv *grpc.Server
 	)
 
-	httpSrv, err = http.New(":8080", nil)
+	conf, err = config.Load()
+	if err != nil {
+		return err
+	}
+
+	httpSrv, err = http.New(conf.HTTP.Addr(), nil)
 	if err != nil {
 		return err
 	}
 	a.RegisterShutdown(httpSrv.Shutdown)
 
-	grpcSrv, err = grpc.New(":9090", func(gs grpc.ServerRegistrator) {
+	grpcSrv, err = grpc.New(conf.GRPC.Addr(), func(gs grpc.ServerRegistrator) {
 		pbHealth.RegisterHealthServiceServer(gs, new(pbHealth.UnimplementedHealthServiceServer))
 	})
 	if err != nil {

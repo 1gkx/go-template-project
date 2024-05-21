@@ -10,7 +10,10 @@
 
 # IDE helper dir
 .idea/
+.intellij/
+*.iml
 .vscode/
+.DS_Store
 
 # Test binary, built with `go test -c`
 *.test
@@ -26,3 +29,5 @@ go.work
 
 # Generated protobuf files
 *.pb.go
+
+docker-compose.override.yaml
