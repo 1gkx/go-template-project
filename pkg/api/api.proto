@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+// import "google/protobuf/timestamp.proto";
+
+import "google/protobuf/empty.proto";
+
+option go_package = "github.com/1gkx/go-template-project/pkg/api";
+
+// HealthResponse
+message HealthResponse {
+  // status
+  string status = 1;
+  // version
+  string version = 2;
+}
+
+// HealthService
+service HealthService {
+  // Health
+  rpc Health(google.protobuf.Empty) returns(HealthResponse) {};
+}

@@ -9,7 +9,14 @@ import (
 
 const appEnvPrefix = ""
 
-type Config struct{}
+type Version struct {
+	Build string
+	Desc  string
+}
+
+type Config struct {
+	Version Version
+}
 
 func Load() (*Config, error) {
 	var cfg *Config

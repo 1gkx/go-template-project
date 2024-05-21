@@ -8,6 +8,10 @@
 *.so
 *.dylib
 
+# IDE helper dir
+.idea/
+.vscode/
+
 # Test binary, built with `go test -c`
 *.test
 
@@ -19,3 +23,6 @@
 
 # Go workspace file
 go.work
+
+# Generated protobuf files
+*.pb.go
