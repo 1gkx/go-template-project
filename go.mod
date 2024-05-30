@@ -1,4 +1,4 @@
-module github.com/1gkx/go-template-project
+module {{ .ModeleName }}
 
 go 1.22.1
 

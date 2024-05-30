@@ -4,7 +4,7 @@ import (
 	"log/slog"
 	"os"
 
-	"github.com/1gkx/go-template-project/internal/app"
+	"{{ .ModeleName }}/internal/app"
 )
 
 var build = "undefined"

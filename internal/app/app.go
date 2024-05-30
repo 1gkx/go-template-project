@@ -8,10 +8,10 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/1gkx/go-template-project/internal/config"
-	"github.com/1gkx/go-template-project/internal/transport/grpc"
-	"github.com/1gkx/go-template-project/internal/transport/http"
-	pbHealth "github.com/1gkx/go-template-project/pkg/api"
+	"{{ .ModeleName }}/internal/config"
+	"{{ .ModeleName }}/internal/transport/grpc"
+	"{{ .ModeleName }}/internal/transport/http"
+	pbHealth "{{ .ModeleName }}/pkg/api"
 )
 
 type App struct {

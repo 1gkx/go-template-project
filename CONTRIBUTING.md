@@ -9,14 +9,7 @@
 ## Оформление коммитов
 Рекомендуется следовать [общим рекомендациям][Common git messages src] к сообщениям git-коммитов и оформлять их в
 соответствии с правилами [Conventional Commits][Conventional commits src]. В футере коммита (если это не hotfix) должен
-содержаться номер задачи в Jira:
-```
-docs: Add CONTRIBUTING.md
-
-Optional detailed description.
-
-MKB11-55
-```
+содержаться номер задачи.
 
 Если не требуется CI проверок для merge-request, можно в футере коммита указать:
 ```
