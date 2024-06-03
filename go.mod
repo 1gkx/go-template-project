@@ -1,4 +1,4 @@
-module {{ .ModeleName }}
+module {{ ModuleName .UserName .ProjectName }}
 
 go 1.22.1
 

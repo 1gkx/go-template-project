@@ -1,5 +1,5 @@
 project_name:
   help: Name of your project
 
-github_username:
+user_name:
   help: Your GitHub username
