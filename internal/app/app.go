@@ -8,10 +8,10 @@ import (
 	"syscall"
 	"time"
 
-	"{{ .ModeleName }}/internal/config"
-	"{{ .ModeleName }}/internal/transport/grpc"
-	"{{ .ModeleName }}/internal/transport/http"
-	pbHealth "{{ .ModeleName }}/pkg/api"
+	"{{ .ModuleName }}/internal/config"
+	"{{ .ModuleName }}/internal/transport/grpc"
+	"{{ .ModuleName }}/internal/transport/http"
+	pbHealth "{{ .ModuleName }}/pkg/api"
 )
 
 type App struct {

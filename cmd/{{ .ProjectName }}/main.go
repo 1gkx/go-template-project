@@ -4,7 +4,7 @@ import (
 	"log/slog"
 	"os"
 
-	"{{ .ModeleName }}/internal/app"
+	"{{ .ModuleName }}/internal/app"
 )
 
 var build = "undefined"
